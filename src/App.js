@@ -17,7 +17,6 @@ class App extends Component {
          <Router>
          <Header/>
            <div className="container">
-           
            <Switch>
              <Route exact path='/' component={Home}></Route>
              <Route path='/login' component={Login}></Route>

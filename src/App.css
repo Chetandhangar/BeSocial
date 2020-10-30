@@ -1,9 +1,18 @@
 html,
 body{
   font-family: 'Courier New', Courier, monospace;
+  
+  background-color: rgb(250, 250, 250);
 }
 
 .container{
   margin: 80px auto 0 auto;
   max-width: 1200px;
+}
+
+.header-container{
+  margin: auto;
+}
+a{
+  text-decoration: none;
 }
