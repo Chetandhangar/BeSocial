@@ -10,6 +10,7 @@
     "axios": "^0.21.0",
     "bootstrap": "^4.0.0",
     "bootstrap-social": "^5.1.1",
+    "dayjs": "^1.9.4",
     "font-awesome": "^4.7.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",

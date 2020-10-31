@@ -9,6 +9,10 @@ import { CardMedia } from '@material-ui/core';
 import { Typography } from '@material-ui/core';
 import {Button} from '@material-ui/core';
 
+//dayjs
+import dayjs from 'dayjs';
+import relativeTime from 'dayjs/plugin/relativeTime';
+
 const styles={
     card:{
         display:'flex',
@@ -24,13 +28,14 @@ content:{
 }
 class Scream extends Component{
     render(){
+        dayjs.extend(relativeTime)
         const {classes,scream:{body, createdAt, userImage, userHandle, screamId, likeCount, commentCount}}= this.props
         return(
          <Card className={classes.card} >
              <CardMedia image={userImage}  className={classes.image}></CardMedia>
              <CardContent className={classes.content}>
               <Typography variant='h5' component={Link} to={`/users/${userHandle}`}>{userHandle}</Typography>
-              <Typography variant='body2'>{createdAt}</Typography>
+              <Typography variant='body2'>{dayjs(createdAt).fromNow()}</Typography>
               <Typography variant='body1'>{body}</Typography>
 
              </CardContent>
