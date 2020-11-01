@@ -12,6 +12,7 @@
     "bootstrap-social": "^5.1.1",
     "dayjs": "^1.9.4",
     "font-awesome": "^4.7.0",
+    "jwt-decode": "^3.0.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-popper": "^0.9.2",

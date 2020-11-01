@@ -11,7 +11,7 @@ import Button from '@material-ui/core/Button';
 import CircularProgress from '@material-ui/core/CircularProgress';
 
 
-const styles ={
+const styles = {
     form:{
         textAlign:'center'
     },
@@ -36,6 +36,8 @@ const styles ={
         position:'absolute'
     }
 }
+
+
 class Login extends Component{
     constructor(){
         super();
@@ -62,6 +64,7 @@ class Login extends Component{
         .post('/login',userData)
         .then((res) =>{
             console.log(res.data);
+            localStorage.getItem('FBIdToken',`Bearer ${res.data.token}`);
             this.setState({
                 loading:false
             });
