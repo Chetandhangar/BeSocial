@@ -1,11 +1,14 @@
 import React,{Component}from 'react';
 import {BrowserRouter as Router,Route,Switch} from 'react-router-dom';
 import './App.css';
-import MuiThemeProvider from '@material-ui/core/styles/MuiThemeProvider';
+import {MuiThemeProvider}from '@material-ui/core/styles';
 import createMuiTheme from '@material-ui/core/styles/createMuiTheme';
 import themePage from './util/theme';
 import jwtDecode from 'jwt-decode';
 
+//redux
+import { Provider } from 'react-redux';
+import store from './redux/stores';
 //component
 import Header from './components/Header';
 //pages
@@ -33,7 +36,7 @@ class App extends Component {
   render(){
     return (
        <MuiThemeProvider theme={theme}>
-         <div className="App">
+         <Provider store={store}>
          <Router>
          <Header/>
            <div className="container">
@@ -44,7 +47,8 @@ class App extends Component {
            </Switch>
            </div>
          </Router>
-       </div>  
+         </Provider>
+         
        </MuiThemeProvider>
     );
   }
