@@ -4,6 +4,9 @@ import Typography from '@material-ui/core/Typography';
 import axios from 'axios';
 import Scream from '../components/Scream';
 
+//component
+import Profile from '../components/Profile';
+
 class Home extends Component{
      state={
         screams:null
@@ -28,7 +31,7 @@ class Home extends Component{
                    {recentpostMarkup}
                </Grid>
                <Grid item sm={4} xs={12}>
-                   <Typography variant='h5'>Profile</Typography>
+                   <Typography variant='h5'><Profile /></Typography>
                </Grid>
            </Grid>
         );
